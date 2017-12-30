@@ -1,46 +1,69 @@
 html, body {
-	height: 100%
-	width: 100%
-	margin: 0;
-	padding: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 div {
-	display: block;
+  display: block;
 }
 
-.header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 0 20px;
-	border-bottom: 1px solid black;
+header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+  position: fixed;
+  z-index: 10;
+}
+
+.headerLogo {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+}
+
+header>nav {
+  padding-right: 40px;
 }
 
 .headerText {
-	flex: 1;
-	font-family: Verdana;
-	font-size: 14px;
-	font-weight: bold;
-	color: MediumAquamarine;
-    padding: 0 20px;
+  flex: 1;
+
+  padding-left: 20px;
+  color: MediumAquamarine;
 }
 
 .headerNav {
-	display: inline-block;
-	padding: 20px;
+  display: inline-block;
+  padding: 20px 10px;
 }
 
 .headerNav a {
-	color: black;
-	font-size: 14px;
+  color: black;
+  font-size: 14px;
 }
 
 .mainContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-    margin: 10px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 10px auto;
 }
 
 .column {
@@ -49,10 +72,6 @@ div {
   justify-content: flex-start;
   align-items: center;
   margin: 20px 20px 0 0;
-}
-
-.flexItem {
-  flex: 1;
 }
 
 .column.large {
@@ -67,23 +86,8 @@ div {
   width: 240px;
 }
 
-.stories {
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.story {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 300px;
-}
-
 .image {
   display: flex;
-  /*flex: 0 0 auto;*/
   height: 300px;
   flex-direction: column;
   justify-content: center;
@@ -92,18 +96,73 @@ div {
   font-size: 30px;
   text-align: center;
   color: white;
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
 .image>span {
-	margin: 20px;
+  margin: 20px;
+}
+
+.stories {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 300px;
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 250px;
 }
 
 .text {
   font-family: Georgia;
   font-size: 17px;
   color: black;
+  margin: 20px auto;
+}
+
+h2 {
+	margin: 0;
+	font-family: Georgia;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+.newsBites {
+  width: 100%;
+  margin: 0;
+}
+
+.newsBites>h3 {
+  background-color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.bites {
+  display: block;
+  font-family: Verdana;
+  font-size: 12px;
+  color: DimGray;
+  background-color: WhiteSmoke;
+  border-bottom: 1px solid black;
+  text-align: left;
+  margin: 0;
+  padding: 10px 20px;
 }
 
 #mainStory {
@@ -111,6 +170,7 @@ div {
   width: 630px;
   font-size: 40px;
   text-align: left;
+  margin: 0;
 }
 
 #earth {
@@ -126,8 +186,43 @@ div {
   width: 300px;
 }
 
-#newsBite {
+#cookie {
   background-image: url("../images/img-news-bite.png");
   width: 240px;
   height: 240px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: MediumAquamarine;
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+.footerText {
+	padding: 20px;
+}
+
+.footerLogoText {
+  font-family: Georgia;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-right: 2px solid white;
+  padding-right: 30px;
+  margin-right: 20px;
+}
+
+footer nav {
+  display: inline-block;
+}
+
+footer a {
+  padding-left: 20px;
+  color: black;
 }
